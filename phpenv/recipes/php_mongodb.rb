@@ -6,7 +6,7 @@ end
 template 'mongo.ini' do
   case node[:platform]
   when 'centos','redhat','fedora','amazon'
-    path "/etc/php.d/mongo.ini"
+    path "/etc/php-5.6.d/mongo.ini"
   when 'debian','ubuntu'
     path "/etc/php5/conf.d/mongo.ini"
   end
