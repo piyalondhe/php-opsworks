@@ -40,7 +40,7 @@
 
   <% if @environment -%>
     <% @environment.each do |key, value| %>
-    SetEnv "<%= key %>" "<%= value %>"
+    SetEnvIf <%= key %> ^(.*)$ "<%= key %>=<%= value %>"
     <% end %>
   <% end %>
 
