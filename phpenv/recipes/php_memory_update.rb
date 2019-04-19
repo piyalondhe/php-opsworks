@@ -1,5 +1,4 @@
 template 'php_memory_update.ini' do
-  case node[:platform]
   path "/etc/php-5.6.d/php_memory_update.ini"
   source 'php_memory_update.ini.erb'
   owner 'root'
